@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UpdateStaff">
+   <children>
+      <ImageView fitHeight="757.0" fitWidth="1362.0" layoutY="-7.0">
+         <image>
+            <Image url="@../Images/staff.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#362f2f" height="767.0" layoutY="-14.0" opacity="0.84" stroke="BLACK" strokeType="INSIDE" width="1368.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff" height="363.0" layoutX="159.0" layoutY="216.0" opacity="0.16" stroke="BLACK" strokeType="INSIDE" width="1052.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff" height="356.0" layoutX="163.0" layoutY="220.0" opacity="0.16" stroke="BLACK" strokeType="INSIDE" width="1044.0" />
+      <Label layoutX="511.0" layoutY="52.0" text="UPDATE STAFF MENU" textFill="WHITE">
+         <font>
+            <Font name="Bauhaus 93" size="43.0" />
+         </font>
+      </Label>
+      <Label layoutX="193.0" layoutY="273.0" prefHeight="17.0" prefWidth="164.0" text="Full Name:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="194.0" layoutY="330.0" prefHeight="17.0" prefWidth="164.0" text="Contact No." textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="194.0" layoutY="389.0" prefHeight="17.0" prefWidth="164.0" text="Email Address:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="194.0" layoutY="448.0" prefHeight="17.0" prefWidth="164.0" text="CNIC No." textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="703.0" layoutY="392.0" prefHeight="17.0" prefWidth="164.0" text="Date Of Birth: " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="fullNameField" layoutX="375.0" layoutY="274.0" prefHeight="25.0" prefWidth="288.0" />
+      <TextField fx:id="contactNumField" layoutX="376.0" layoutY="331.0" prefHeight="25.0" prefWidth="288.0" />
+      <TextField fx:id="emailAddfild" layoutX="376.0" layoutY="390.0" prefHeight="25.0" prefWidth="288.0" />
+      <TextField fx:id="cnicNumField" layoutX="376.0" layoutY="449.0" prefHeight="25.0" prefWidth="288.0" />
+      <Label layoutX="421.0" layoutY="136.0" prefHeight="17.0" prefWidth="164.0" text="Staff Number:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="703.0" layoutY="274.0" prefHeight="17.0" prefWidth="164.0" text="Address:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="703.0" layoutY="333.0" prefHeight="17.0" prefWidth="164.0" text="City:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="guestNumField" layoutX="570.0" layoutY="137.0" prefHeight="25.0" prefWidth="288.0" />
+      <TextField fx:id="addressField" layoutX="885.0" layoutY="275.0" prefHeight="25.0" prefWidth="288.0" />
+      <TextField fx:id="cityField" layoutX="885.0" layoutY="334.0" prefHeight="25.0" prefWidth="288.0" />
+      <DatePicker fx:id="dateField" layoutX="885.0" layoutY="393.0" prefHeight="25.0" prefWidth="288.0" />
+      <Button fx:id="saveDataButton" layoutX="1065.0" layoutY="515.0" mnemonicParsing="false" onAction="#saveDataF" text="Update Data!" textFill="#0e0143">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="backButton" layoutX="152.0" layoutY="61.0" mnemonicParsing="false" onAction="#backButtonF" text="Back" textFill="#140257">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="193.0" layoutY="501.0" prefHeight="17.0" prefWidth="164.0" text="Designation" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="703.0" layoutY="445.0" prefHeight="17.0" prefWidth="164.0" text="Date of Joining:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="DesignationFeild" layoutX="376.0" layoutY="502.0" prefHeight="25.0" prefWidth="288.0" />
+      <DatePicker fx:id="JoiningDate" layoutX="885.0" layoutY="446.0" prefHeight="25.0" prefWidth="288.0" />
+      <Button fx:id="FetchData" layoutX="889.0" layoutY="137.0" mnemonicParsing="false" onAction="#fetchDataF" prefHeight="25.0" prefWidth="96.0" text="Fetch Data!" textFill="#0e0143" />
+   </children>
+</AnchorPane>

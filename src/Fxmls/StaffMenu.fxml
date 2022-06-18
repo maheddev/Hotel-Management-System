@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="488.0" prefWidth="842.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StaffMenu">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="843.0" layoutY="-3.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Images/staff.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="497.0" layoutX="-1.0" opacity="0.84" stroke="BLACK" strokeType="INSIDE" width="843.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#130446" height="278.0" layoutX="131.0" layoutY="110.0" opacity="0.43" stroke="BLACK" strokeType="INSIDE" width="580.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#000d17" height="272.0" layoutX="134.0" layoutY="113.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="574.0" />
+      <Button fx:id="checkin" layoutX="317.0" layoutY="200.0" mnemonicParsing="false" onAction="#checkinf" prefHeight="35.0" prefWidth="207.0" text="CHECK IN GUESTS">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" layoutX="310.0" layoutY="49.0" prefHeight="45.0" prefWidth="226.0" text="STAFF MENU" textFill="WHITE">
+         <font>
+            <Font name="Bauhaus 93" size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="checkOut" layoutX="317.0" layoutY="277.0" mnemonicParsing="false" onAction="#checkOutF" prefHeight="35.0" prefWidth="207.0" text="CHECK OUT GUESTS">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="LogoutButton" layoutX="346.0" layoutY="425.0" mnemonicParsing="false" onAction="#LogoutButtonF" prefHeight="25.0" prefWidth="150.0" text="Log Out!" textFill="#0e0143">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="585.0" prefWidth="969.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AttendanceMark">
+   <children>
+      <ImageView fitHeight="585.0" fitWidth="969.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Images/attend.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="585.0" opacity="0.76" stroke="BLACK" strokeType="INSIDE" width="969.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="284.0" layoutX="161.0" layoutY="163.0" opacity="0.48" stroke="BLACK" strokeType="INSIDE" width="648.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#01284a" height="273.0" layoutX="167.0" layoutY="169.0" stroke="BLACK" strokeType="INSIDE" width="637.0" />
+      <Label layoutX="217.0" layoutY="67.0" prefHeight="65.0" prefWidth="535.0" text="STAFF ATTENDANCE MENU" textFill="WHITE">
+         <font>
+            <Font name="Bauhaus 93" size="43.0" />
+         </font>
+      </Label>
+      <Label layoutX="247.0" layoutY="273.0" prefHeight="17.0" prefWidth="164.0" text="Staff No." textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="247.0" layoutY="357.0" prefHeight="17.0" prefWidth="164.0" text="Date:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="StaffNumber" layoutX="429.0" layoutY="274.0" prefHeight="25.0" prefWidth="288.0" />
+      <Label layoutX="247.0" layoutY="317.0" prefHeight="17.0" prefWidth="164.0" text="Hours Worked" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="hoursWorked" layoutX="429.0" layoutY="318.0" prefHeight="25.0" prefWidth="288.0" />
+      <DatePicker fx:id="dateField" layoutX="429.0" layoutY="358.0" prefHeight="25.0" prefWidth="288.0" />
+      <Button fx:id="saveDataButton" layoutX="441.0" layoutY="488.0" mnemonicParsing="false" onAction="#saveDataF" text="Save Data!" textFill="#0e0143">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="247.0" layoutY="223.0" prefHeight="17.0" prefWidth="164.0" text="Staff Status" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="newStaff" layoutX="429.0" layoutY="228.0" mnemonicParsing="false" text="New Staff" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="staffcat" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="newStaff1" layoutX="542.0" layoutY="228.0" mnemonicParsing="false" text="Existing Staff" textFill="WHITE" toggleGroup="$staffcat">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </RadioButton>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

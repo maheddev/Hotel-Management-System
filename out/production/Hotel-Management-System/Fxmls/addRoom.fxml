@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddRoom">
+   <children>
+      <ImageView fitHeight="759.0" fitWidth="1374.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../Images/rooms.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="759.0" fitWidth="1374.0">
+         <image>
+            <Image url="@../../../../Downloads/room.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="773.0" layoutY="-14.0" opacity="0.8" stroke="BLACK" strokeType="INSIDE" width="1374.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="332.0" layoutX="168.0" layoutY="219.0" opacity="0.42" stroke="BLACK" strokeType="INSIDE" width="1043.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#012443" height="324.0" layoutX="172.0" layoutY="223.0" stroke="BLACK" strokeType="INSIDE" width="1036.0" />
+      <Label layoutX="480.0" layoutY="93.0" text="ADD NEW ROOM MENU" textFill="WHITE">
+         <font>
+            <Font name="Bauhaus 93" size="43.0" />
+         </font>
+      </Label>
+      <Label layoutX="201.0" layoutY="285.0" prefHeight="17.0" prefWidth="164.0" text="Room No." textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="201.0" layoutY="343.0" prefHeight="17.0" prefWidth="164.0" text="Floor No." textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="201.0" layoutY="402.0" prefHeight="17.0" prefWidth="164.0" text="No. of Beds" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="201.0" layoutY="461.0" prefHeight="17.0" prefWidth="164.0" text="Is Reserved" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="710.0" layoutY="461.0" prefHeight="17.0" prefWidth="164.0" text="Mini Kitchen:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="RoomNoF" layoutX="383.0" layoutY="286.0" prefHeight="25.0" prefWidth="288.0" />
+      <TextField fx:id="FloorNo" layoutX="383.0" layoutY="344.0" prefHeight="25.0" prefWidth="288.0" />
+      <TextField fx:id="BedNo" layoutX="383.0" layoutY="403.0" prefHeight="25.0" prefWidth="288.0" />
+      <Label layoutX="710.0" layoutY="285.0" prefHeight="17.0" prefWidth="164.0" text="Room Type:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="710.0" layoutY="343.0" prefHeight="17.0" prefWidth="164.0" text="Air Conditioning:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="710.0" layoutY="402.0" prefHeight="17.0" prefWidth="164.0" text="MiniBar:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="saveDataButton" layoutX="642.0" layoutY="607.0" mnemonicParsing="false" onAction="#saveDataF" text="Save Data!" textFill="#0e0143">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="backButton" layoutX="157.0" layoutY="102.0" mnemonicParsing="false" onAction="#backButtonF" text="Back" textFill="#140257">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="RoomType" layoutX="883.0" layoutY="286.0" prefHeight="25.0" prefWidth="288.0" />
+      <RadioButton fx:id="ACyes" layoutX="883.0" layoutY="344.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="74.0" text="Yes" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="AC" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="Baryes" layoutX="883.0" layoutY="403.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="74.0" text="Yes" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="Bar" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="kitchenYes" layoutX="883.0" layoutY="462.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="74.0" text="Yes" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="kitchen" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="ACno" layoutX="996.0" layoutY="344.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="74.0" text="No" textFill="WHITE" toggleGroup="$AC">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="BarNo" layoutX="996.0" layoutY="403.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="74.0" text="No" textFill="WHITE" toggleGroup="$Bar">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="KitchenNo" layoutX="996.0" layoutY="462.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="74.0" text="No" textFill="WHITE" toggleGroup="$kitchen">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="isResYes" layoutX="383.0" layoutY="462.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="74.0" text="Yes" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="reserved" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="isResNo" layoutX="496.0" layoutY="462.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="74.0" text="No" textFill="WHITE" toggleGroup="$reserved">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </RadioButton>
+   </children>
+</AnchorPane>
