@@ -2,6 +2,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
+import javax.swing.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -48,8 +49,9 @@ public class AttendanceMark {
                 p.setInt(2, Integer.parseInt(hoursWorked.getText()));
                 p.setString(3, dateField.getValue().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
                 p.execute();
+                JOptionPane.showMessageDialog(null,"Attendance Marked!");
             } catch (SQLException e) {
-                throw new RuntimeException(e);
+                JOptionPane.showMessageDialog(null,"Operation Failed!");
             }
         }
         else {
@@ -70,10 +72,11 @@ public class AttendanceMark {
                     p.setString(2, dateField.getValue().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
                     p.setString(3, StaffNumber.getText());
                     p.execute();
+                    JOptionPane.showMessageDialog(null,"Attendance Updated!");
                 }
 
             } catch (SQLException e) {
-                throw new RuntimeException(e);
+                JOptionPane.showMessageDialog(null,"Operation Failed!");
             }
         }
 

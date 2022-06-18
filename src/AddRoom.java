@@ -12,6 +12,7 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -133,8 +134,9 @@ public class AddRoom implements Initializable {
             p.setString(7, getKitchenSelection());
             p.setString(8, getisResSelection());
             p.execute();
+            JOptionPane.showMessageDialog(null,"Data Saved!");
         } catch (SQLException throwables) {
-            throwables.printStackTrace();
+            JOptionPane.showMessageDialog(null,"Operation Failed!");
         }
 
     }

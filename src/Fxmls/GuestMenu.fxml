@@ -54,7 +54,7 @@
       <TextField fx:id="RoomNum" layoutX="344.0" layoutY="209.0" prefHeight="25.0" prefWidth="313.0" />
       <TextField fx:id="resNo" layoutX="344.0" layoutY="280.0" prefHeight="25.0" prefWidth="313.0" />
       <DatePicker fx:id="date" layoutX="345.0" layoutY="245.0" prefHeight="25.0" prefWidth="313.0" />
-      <Button fx:id="LogoutButton" layoutX="562.0" layoutY="416.0" mnemonicParsing="false" onAction="#LogoutButtonF" prefHeight="25.0" prefWidth="150.0" text="Log Out!" textFill="#0e0143">
+      <Button fx:id="LogoutButton" layoutX="562.0" layoutY="416.0" mnemonicParsing="false" onAction="#LogoutButtonF" prefHeight="25.0" prefWidth="150.0" text="Back" textFill="#0e0143">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>

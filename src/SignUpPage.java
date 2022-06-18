@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 import javax.swing.*;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -36,61 +37,45 @@ public class SignUpPage {
     String welcomeNote;
     @FXML
     void loginClicked(ActionEvent event) {
-        if(manager.isSelected()){
-            String query = "Select * from login where userName = ? and password=?";
-            try {
-                Connecter conC = new Connecter();
-                Connection con = conC.connection;
-                prep = con.prepareStatement(query);
-                prep.setString(1,usernameLogin.getText());
-                prep.setString(2,passwordLogin.getText());
-                resultSet = prep.executeQuery();
-                if(resultSet.next()){
-                    Stage stage = (Stage) loginButton.getScene().getWindow();
-                    stage.close();
-                    Parent root = FXMLLoader.load(getClass().getResource("Fxmls/MainPage.fxml"));
-                    stage = new Stage();
-                    stage.setTitle("Hotel Management App");
-                    stage.setScene(new Scene(root));
+        String query = "Select * from login where userName = ? and password=?";
+        try {
+            Connecter conC = new Connecter();
+            Connection con = conC.connection;
+            prep = con.prepareStatement(query);
+            prep.setString(1,usernameLogin.getText());
+            prep.setString(2,passwordLogin.getText());
+            resultSet = prep.executeQuery();
+            if(resultSet.next()){
+                Stage stage = (Stage) loginButton.getScene().getWindow();
+                stage.close();
+                Parent root = FXMLLoader.load(getClass().getResource("Fxmls/MainPage.fxml"));
+                stage = new Stage();
+                stage.setTitle("Hotel Management App");
+                stage.setScene(new Scene(root));
 
-                    welcomeNote = "Welcome Dear, "+usernameLogin;
-                    stage.show();
-                }
-                else{
-                    JOptionPane.showMessageDialog(null,"Username or Password Incorrect!");
-                }
+                welcomeNote = "Welcome Dear, "+usernameLogin;
+                stage.show();
             }
-            catch (Exception e){
-                e.printStackTrace();
+            else{
+                JOptionPane.showMessageDialog(null,"Username or Password Incorrect!");
             }
         }
-        else if(guest.isSelected()){
-            String query = "Select * from Guestslogin l, Guests G where G.GNumber = l.GNumber and GName = ? and passwordS=?";
-            try {
-                Connecter conC = new Connecter();
-                Connection con = conC.connection;
-                prep = con.prepareStatement(query);
-                prep.setString(1,usernameLogin.getText());
-                prep.setString(2,passwordLogin.getText());
-                resultSet = prep.executeQuery();
-                if(resultSet.next()){
-                    Stage stage = (Stage) loginButton.getScene().getWindow();
-                    stage.close();
-                    Parent root = FXMLLoader.load(getClass().getResource("Fxmls/GuestMenu.fxml"));
-                    stage = new Stage();
-                    stage.setTitle("Hotel Management App");
-                    stage.setScene(new Scene(root));
-                    //
-                    stage.show();
-                }
-                else{
-                    JOptionPane.showMessageDialog(null,"Username or Password Incorrect!");
-                }
-            }
-            catch (Exception e){
-                e.printStackTrace();
-            }
+        catch (Exception e){
+            e.printStackTrace();
         }
-
     }
+
+    @FXML
+    void GloginButtonF(ActionEvent event) throws IOException {
+        Stage stage = (Stage) loginButton.getScene().getWindow();
+        stage.close();
+        Parent root = FXMLLoader.load(getClass().getResource("Fxmls/GuestMenu.fxml"));
+        stage = new Stage();
+        stage.setTitle("Hotel Management App");
+        stage.setScene(new Scene(root));
+
+        welcomeNote = "Welcome Dear, "+usernameLogin;
+        stage.show();
+    }
+
 }
