@@ -8,6 +8,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -59,10 +60,11 @@ public class addNewGuest {
             p.setString(7,emailAddfild.getText());
             p.setString(8,dateField.getValue().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
             p.execute();
+            JOptionPane.showMessageDialog(null,"Data Saved!");
 
         }
         catch (Exception e){
-            e.printStackTrace();
+            JOptionPane.showMessageDialog(null,"An Error Occured!");
         }
     }
     @FXML

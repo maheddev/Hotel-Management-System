@@ -116,6 +116,10 @@ public class UpdateRoom implements Initializable {
                 FloorNo.setText(r.getString(2));
                 BedNo.setText(r.getString(5));
             }
+            else{
+
+                JOptionPane.showMessageDialog(null,"Operation Failed, Try Again");
+            }
         }catch (SQLException throwables) {
             throwables.printStackTrace();
         }
@@ -150,17 +154,21 @@ public class UpdateRoom implements Initializable {
     @FXML
     void saveDataF(ActionEvent event) throws SQLException {
         String q = "UPDATE RoomsData Set Floor = ?, roomType = ?, AC=? , Beds = ?, MiniBar = ?, MiniKitchen= ? where RoomNo= ?";
-        ps = con1.prepareStatement(q);
-        ps.setString(1, String.valueOf(FloorNo.getText()));
-        FloorNo.setEditable(false);
-        ps.setString(2, RoomType.getSelectionModel().getSelectedItem().toString());
-        ps.setString(3, getACSelection());
-        ps.setString(4, BedNo.getText());
-        ps.setString(5, getBarSelection());
-        ps.setString(6, getKitchenSelection());
-        ps.setString(7, RoomNoF.getText());
-        ps.execute();
-
+        try{
+            ps = con1.prepareStatement(q);
+            ps.setString(1, String.valueOf(FloorNo.getText()));
+            FloorNo.setEditable(false);
+            ps.setString(2, RoomType.getSelectionModel().getSelectedItem().toString());
+            ps.setString(3, getACSelection());
+            ps.setString(4, BedNo.getText());
+            ps.setString(5, getBarSelection());
+            ps.setString(6, getKitchenSelection());
+            ps.setString(7, RoomNoF.getText());
+            ps.execute();
+            JOptionPane.showMessageDialog(null, "Data Updated");
+        }catch (Exception e){
+            JOptionPane.showMessageDialog(null,"Operation Failed!");
+        }
     }
 
 

@@ -9,6 +9,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -95,7 +96,10 @@ public class UpdateStaff implements Initializable {
                 dateField.getEditor().setText(String.format(r.getString( 8), DateTimeFormatter.ofPattern("dd/MM/yyyy")));
                 DesignationFeild.setText(r.getString( 9));
                 JoiningDate.getEditor().setText(String.format(r.getString(10), DateTimeFormatter.ofPattern("dd/MM/yyyy")));
+            }
+            else{
 
+                JOptionPane.showMessageDialog(null,"Operation Failed, Try Again");
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -105,19 +109,23 @@ public class UpdateStaff implements Initializable {
         @FXML
     void saveDataF(ActionEvent event) throws SQLException {
             String q = "UPDATE Staff Set SName = ?, SCnic = ?, SContact=? , SAddress = ?, SCity = ?, SMail= ?, SDOB= ? ,Spos= ? ,SDoj= ? where SNumber= ?";
-            ps = con1.prepareStatement(q);
-            ps.setString(1,fullNameField.getText());
-            ps.setString(2,cnicNumField.getText());
-            ps.setString(3,contactNumField.getText());
-            ps.setString(4,addressField.getText());
-            ps.setString(5,cityField.getText());
-            ps.setString(6,emailAddfild.getText());
-            ps.setString(7,dateField.getValue().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
-            ps.setString(8,DesignationFeild.getText());
-            ps.setString(9,JoiningDate.getValue().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
-            ps.setString(10,guestNumField.getText());
-            ps.execute();
-
+            try{
+                ps = con1.prepareStatement(q);
+                ps.setString(1,fullNameField.getText());
+                ps.setString(2,cnicNumField.getText());
+                ps.setString(3,contactNumField.getText());
+                ps.setString(4,addressField.getText());
+                ps.setString(5,cityField.getText());
+                ps.setString(6,emailAddfild.getText());
+                ps.setString(7,dateField.getEditor().getText());
+                ps.setString(8,DesignationFeild.getText());
+                ps.setString(9,JoiningDate.getEditor().getText());
+                ps.setString(10,guestNumField.getText());
+                ps.execute();
+                JOptionPane.showMessageDialog(null, "Data Updated");
+            }catch (Exception e){
+            JOptionPane.showMessageDialog(null,"Operation Failed!");
+        }
     }
 
     @Override

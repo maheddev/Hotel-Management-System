@@ -83,10 +83,10 @@ public class AddStaff {
             p.setString(10,JoiningDate.getValue().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
             p.execute();
 
+            JOptionPane.showMessageDialog(null,"Data Saved!");
         }
         catch (Exception e){
             JOptionPane.showMessageDialog(null,"An Error Occurred");
-            e.printStackTrace();
         }
     }
 
