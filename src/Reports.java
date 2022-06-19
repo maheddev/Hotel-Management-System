@@ -55,12 +55,11 @@ public class Reports {
     @FXML
     void backButtonF(ActionEvent event) throws IOException {
         Stage stage = (Stage) backButton.getScene().getWindow();
-        stage.close();
         Parent root = FXMLLoader.load(getClass().getResource("Fxmls/MainPage.fxml"));
-        stage = new Stage();
         stage.setTitle("Hotel Management App");
+        stage.setMaxHeight(768);
+        stage.setMaxWidth(1366);
         stage.setScene(new Scene(root));
-        
         stage.show();
     }
 

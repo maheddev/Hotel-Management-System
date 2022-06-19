@@ -23,15 +23,15 @@ public class GuestMenu {
     @FXML
     void LogoutButtonF(ActionEvent event) {
         Stage stage = (Stage) LogoutButton.getScene().getWindow();
-        stage.close();
         Parent root = null;
         try {
             root = FXMLLoader.load(getClass().getResource("Fxmls/LoginPage.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
-        stage = new Stage();
         stage.setTitle("Hotel Management App");
+        stage.setMaxHeight(768);
+        stage.setMaxWidth(1366);
         stage.setScene(new Scene(root));
         //
         stage.show();

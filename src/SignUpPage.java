@@ -47,13 +47,12 @@ public class SignUpPage {
             resultSet = prep.executeQuery();
             if(resultSet.next()){
                 Stage stage = (Stage) loginButton.getScene().getWindow();
-                stage.close();
                 Parent root = FXMLLoader.load(getClass().getResource("Fxmls/MainPage.fxml"));
-                stage = new Stage();
+                stage.setMaxHeight(768);
+                stage.setMaxWidth(1366);
                 stage.setTitle("Hotel Management App");
                 stage.setScene(new Scene(root));
 
-                welcomeNote = "Welcome Dear, "+usernameLogin;
                 stage.show();
             }
             else{
@@ -68,13 +67,9 @@ public class SignUpPage {
     @FXML
     void GloginButtonF(ActionEvent event) throws IOException {
         Stage stage = (Stage) loginButton.getScene().getWindow();
-        stage.close();
         Parent root = FXMLLoader.load(getClass().getResource("Fxmls/GuestMenu.fxml"));
-        stage = new Stage();
         stage.setTitle("Hotel Management App");
         stage.setScene(new Scene(root));
-
-        welcomeNote = "Welcome Dear, "+usernameLogin;
         stage.show();
     }
 

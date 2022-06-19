@@ -84,14 +84,14 @@ public class MainPage {
     @FXML
     void LogoutButtonF(ActionEvent event) {
         Stage stage = (Stage) LogoutButton.getScene().getWindow();
-        stage.close();
         Parent root = null;
         try {
             root = FXMLLoader.load(getClass().getResource("Fxmls/LoginPage.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
-        stage = new Stage();
+        stage.setMaxHeight(768);
+        stage.setMaxWidth(1366);
         stage.setTitle("Hotel Management App");
         stage.setScene(new Scene(root));
         //
@@ -101,14 +101,14 @@ public class MainPage {
     @FXML
     void addNewGuestF(ActionEvent event) {
         Stage stage = (Stage) addNewGuest.getScene().getWindow();
-        stage.close();
         Parent root = null;
         try {
             root = FXMLLoader.load(getClass().getResource("Fxmls/addGuest.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
-        stage = new Stage();
+        stage.setMaxHeight(768);
+        stage.setMaxWidth(1366);
         stage.setTitle("Hotel Management App");
         stage.setScene(new Scene(root));
         //
@@ -118,14 +118,14 @@ public class MainPage {
     @FXML
     void addNewRoomF(ActionEvent event) {
         Stage stage = (Stage) addRoom.getScene().getWindow();
-        stage.close();
         Parent root = null;
         try {
             root = FXMLLoader.load(getClass().getResource("Fxmls/addRoom.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
-        stage = new Stage();
+        stage.setMaxHeight(768);
+        stage.setMaxWidth(1366);
         stage.setTitle("Hotel Management App");
         stage.setScene(new Scene(root));
         //
@@ -135,14 +135,14 @@ public class MainPage {
     @FXML
     void addNewStaffF(ActionEvent event) {
         Stage stage = (Stage) addRoom.getScene().getWindow();
-        stage.close();
         Parent root = null;
         try {
             root = FXMLLoader.load(getClass().getResource("Fxmls/addStaff.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
-        stage = new Stage();
+        stage.setMaxHeight(768);
+        stage.setMaxWidth(1366);
         stage.setTitle("Hotel Management App");
         stage.setScene(new Scene(root));
         //
@@ -153,14 +153,14 @@ public class MainPage {
     @FXML
     void checkInF(ActionEvent event) {
         Stage stage = (Stage) checkInButton.getScene().getWindow();
-        stage.close();
         Parent root = null;
         try {
             root = FXMLLoader.load(getClass().getResource("Fxmls/CheckIn.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
-        stage = new Stage();
+        stage.setMaxHeight(768);
+        stage.setMaxWidth(1366);
         stage.setTitle("Hotel Management App");
         stage.setScene(new Scene(root));
         //
@@ -207,14 +207,14 @@ public class MainPage {
     @FXML
     void checkReservationsF(ActionEvent event) {
         Stage stage = (Stage) checkReservationButton.getScene().getWindow();
-        stage.close();
         Parent root = null;
         try {
             root = FXMLLoader.load(getClass().getResource("Fxmls/Reservations.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
-        stage = new Stage();
+        stage.setMaxHeight(768);
+        stage.setMaxWidth(1366);
         stage.setTitle("Hotel Management App");
         stage.setScene(new Scene(root));
         //
@@ -225,51 +225,48 @@ public class MainPage {
     @FXML
     void generateReportF(ActionEvent event) {
         Stage stage = (Stage) reportButton.getScene().getWindow();
-        stage.close();
         Parent root = null;
         try {
             root = FXMLLoader.load(getClass().getResource("Fxmls/Reports.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
-        stage = new Stage();
+        stage.setMaxHeight(768);
+        stage.setMaxWidth(1366);
         stage.setTitle("Hotel Management App");
         stage.setScene(new Scene(root));
-        //
         stage.show();
     }
 
     @FXML
     void updateRoomF(ActionEvent event) {
         Stage stage = (Stage) updateRoom.getScene().getWindow();
-        stage.close();
         Parent root = null;
         try {
             root = FXMLLoader.load(getClass().getResource("Fxmls/UpdateRoom.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
-        stage = new Stage();
+        stage.setMaxHeight(768);
+        stage.setMaxWidth(1366);
         stage.setTitle("Hotel Management App");
         stage.setScene(new Scene(root));
-        //
         stage.show();
     }
 
     @FXML
     void updateStaffF(ActionEvent event) {
         Stage stage = (Stage) updateStaffButton.getScene().getWindow();
-        stage.close();
         Parent root = null;
         try {
             root = FXMLLoader.load(getClass().getResource("Fxmls/UpdateStaff.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
-        stage = new Stage();
+        stage.setMaxHeight(768);
+        stage.setMaxWidth(1366);
         stage.setTitle("Hotel Management App");
         stage.setScene(new Scene(root));
-        //
         stage.show();
     }
 

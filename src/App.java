@@ -8,6 +8,8 @@ public class App extends javafx.application.Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Fxmls/LoginPage.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
+        stage.setMaxHeight(768);
+        stage.setMaxWidth(1366);
         //stage.setMaximized(true);
         stage.setTitle("Hotel Management App");
         stage.setScene(scene);
