@@ -64,13 +64,20 @@ public class SignUpPage {
         }
     }
 
+    private Button GloginButton;
+
     @FXML
     void GloginButtonF(ActionEvent event) throws IOException {
-        Stage stage = (Stage) loginButton.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("Fxmls/GuestMenu.fxml"));
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(getClass().getResource("Fxmls/GuestMenu.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Stage stage = new Stage();
         stage.setTitle("Hotel Management App");
         stage.setScene(new Scene(root));
+        // stage.setMaximized(true);
         stage.show();
     }
-
 }

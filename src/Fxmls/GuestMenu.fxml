@@ -20,7 +20,7 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="494.0" layoutY="-2.0" opacity="0.29" stroke="BLACK" strokeType="INSIDE" width="843.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="278.0" layoutX="132.0" layoutY="108.0" opacity="0.55" stroke="BLACK" strokeType="INSIDE" width="580.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#000d17" height="272.0" layoutX="135.0" layoutY="111.0" stroke="BLACK" strokeType="INSIDE" width="574.0" />
-      <Button fx:id="reserveRoom" layoutX="320.0" layoutY="414.0" mnemonicParsing="false" onAction="#resRoomF" prefHeight="35.0" prefWidth="207.0" text="Reserve a Room">
+      <Button fx:id="reserveRoom" layoutX="321.0" layoutY="412.0" mnemonicParsing="false" onAction="#resRoomF" prefHeight="35.0" prefWidth="207.0" text="Reserve a Room">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -54,10 +54,5 @@
       <TextField fx:id="RoomNum" layoutX="344.0" layoutY="209.0" prefHeight="25.0" prefWidth="313.0" />
       <TextField fx:id="resNo" layoutX="344.0" layoutY="280.0" prefHeight="25.0" prefWidth="313.0" />
       <DatePicker fx:id="date" layoutX="345.0" layoutY="245.0" prefHeight="25.0" prefWidth="313.0" />
-      <Button fx:id="LogoutButton" layoutX="562.0" layoutY="416.0" mnemonicParsing="false" onAction="#LogoutButtonF" prefHeight="25.0" prefWidth="150.0" text="Back" textFill="#0e0143">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font>
-      </Button>
    </children>
 </AnchorPane>

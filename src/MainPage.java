@@ -53,6 +53,23 @@ public class MainPage {
     private Button updateStaffButton;
 
     @FXML
+    private Button GloginButton;
+    @FXML
+    void GloginButtonF(ActionEvent event) throws IOException {
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(getClass().getResource("Fxmls/GuestMenu.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Stage stage = new Stage();
+        stage.setTitle("Hotel Management App");
+        stage.setScene(new Scene(root));
+        // stage.setMaximized(true);
+        stage.show();
+    }
+
+    @FXML
     void GenerateSalaryF(ActionEvent event) {
         Parent root = null;
         try {
